@@ -25,7 +25,7 @@ public class EmailListServlet extends HttpServlet {
 			String message = "Please fill out all three text boxes.";
 			req.setAttribute("message", message);
 
-			RequestDispatcher rd = req.getRequestDispatcher("index	.jsp");
+			RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
 			rd.forward(req, resp);
 		} else {
 			// Nếu dữ liệu hợp lệ, tạo đối tượng User
@@ -37,4 +37,10 @@ public class EmailListServlet extends HttpServlet {
 			rd.forward(req, resp);
 		}
 	}
+	
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		doPost(req, resp);
+		
+		}
 }
