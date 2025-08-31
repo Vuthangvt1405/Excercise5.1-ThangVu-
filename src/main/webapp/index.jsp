@@ -30,22 +30,23 @@ h1 {
 	<span> To join our email list, enter your name and email address
 	</span>
 	<br>
-	<br>
-	<span>Please fill out all three text boxes</span>
-	<br>
-	<br>
+
+	<p>
+		<i>${message}</i>
+	</p>
 	<form action="emailList" method="POST">
 		<input type="hidden" name="action" value="add">
 		<div class="form-group">
-			<label>Email:</label> <input id="email" name="email" type="text" />
+			<label>Email:</label> <input value="${ user.email}" id="email"
+				name="email" type="text" />
 		</div>
 		<div class="form-group">
-			<label>First Name:</label> <input id="firstName" name="firstName"
-				type="text" />
+			<label>First Name:</label> <input value="${ user.firstName}"
+				id="firstName" name="firstName" type="text" />
 		</div>
 		<div class="form-group">
-			<label>Last Name:</label> <input id="lastName" name="lastName"
-				type="text" />
+			<label>Last Name:</label> <input value="${ user.lastName}"
+				id="lastName" name="lastName" type="text" />
 		</div>
 		<br>
 		<button>join now</button>
